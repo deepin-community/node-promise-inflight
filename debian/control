@@ -1,0 +1,26 @@
+Source: node-promise-inflight
+Section: web
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Gazala M <gazalam@disroot.org>
+Build-Depends:
+ debhelper (>= 9)
+ , dh-buildinfo
+ , nodejs
+Standards-Version: 4.0.0
+Homepage: https://github.com/iarna/promise-inflight#readme
+Vcs-Git: https://anonscm.debian.org/git/pkg-javascript/node-promise-inflight.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-javascript/node-promise-inflight.git
+
+Package: node-promise-inflight
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+Description: one promise for multiple requests in flight to avoid async duplication
+ Multiple requests called with the same result (only one underlying promise)
+ Based on the callback based function 'inflight'.
+ .
+ Usage: return inflight(key, () => {/*fetch url*/ return Promise.delay(100)}
+ .
+ Node.js is an event-based server-side JavaScript engine.
