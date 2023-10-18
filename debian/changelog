@@ -1,9 +1,33 @@
-node-promise-inflight (1.0.1-1.1) unstable; urgency=medium
+node-promise-inflight (1.0.1+~1.0.0-1) unstable; urgency=medium
 
-  * Non maintainer upload by the Reproducible Builds team.
-  * No source change upload to rebuild on buildd with .buildinfo files.
+  * Team upload
 
- -- Holger Levsen <holger@debian.org>  Mon, 28 Dec 2020 00:42:10 +0100
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update Vcs-* headers from URL redirect.
+  * Use canonical URL in Vcs-Git.
+  * Apply multi-arch hints.
+    + node-promise-inflight: Add Multi-Arch: foreign.
+  * Bump debhelper from old 12 to 13.
+
+  [ Yadd ]
+  * Declare compliance with policy 4.6.0
+  * Add "Rules-Requires-Root: no"
+  * Change section to javascript
+  * Add debian/gbp.conf
+  * Modernize debian/watch
+    * Fix filenamemangle
+    * Fix GitHub tags regex
+  * Drop dependency to nodejs
+  * Use dh-sequence-nodejs auto install
+  * Embed typescript declarations and repack
+
+ -- Yadd <yadd@debian.org>  Fri, 24 Dec 2021 17:54:04 +0100
 
 node-promise-inflight (1.0.1-1) unstable; urgency=low
 
