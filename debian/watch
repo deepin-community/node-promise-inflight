@@ -1,5 +1,10 @@
-version=3
+version=4
 opts=\
-dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-promise-inflight-$1.tar.gz/ \
- https://github.com/iarna/promise-inflight/tags .*/archive/v?([\d\.]+).tar.gz
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-promise-inflight-$1/ \
+ https://github.com/iarna/promise-inflight/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=types-promise-inflight,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-promise-inflight-$1/" \
+ https://registry.npmjs.org/@types/promise-inflight https://registry.npmjs.org/@types/promise-inflight/-/promise-inflight-([\d\.]+)@ARCHIVE_EXT@ group
